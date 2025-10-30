@@ -1,0 +1,17 @@
+:root {
+    --color-primary: #2C3E50;
+    --color-secondary: #3498DB;
+    --color-accent: #E74C3C;
+    --color-success: #27AE60;
+    --color-warning: #F39C12;
+    --color-background: #ECF0F1;
+    --color-text-primary: #2C3E50;
+    --color-text-secondary: #7F8C8D;
+    --color-white: #FFFFFF;
+    --color-border: #BDC3C7;
+    
+    --swot-strengths: #4CAF50;
+    --swot-weaknesses: #F44336;
+    --swot-opportunities: #2196F3;
+    --swot-threats: #FF9800;
+}

@@ -1,0 +1,19 @@
+@media (prefers-reduced-motion: reduce) {
+    .cover-slide::before,
+    .cover-slide::after,
+    .cover-slide .slide-title,
+    .cover-slide .slide-subtitle,
+    .cover-divider,
+    .cover-footer,
+    .cover-logo,
+    .cover-stats,
+    .cover-authors {
+        animation: none;
+        opacity: 1;
+    }
+    
+    .cover-stat-item:hover,
+    .cover-author-item:hover {
+        transform: none;
+    }
+}

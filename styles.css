@@ -1,0 +1,16 @@
+/* Importação de todos os módulos CSS */
+@import url('./css/variables.css');
+@import url('./css/base.css');
+@import url('./css/animations.css');
+@import url('./css/presentation.css');
+@import url('./css/cover-slide.css');
+@import url('./css/slide-components.css');
+@import url('./css/timeline.css');
+@import url('./css/porter.css');
+@import url('./css/porter-analysis.css');
+@import url('./css/swot.css');
+@import url('./css/areas.css');
+@import url('./css/conclusion.css');
+@import url('./css/navigation.css');
+@import url('./css/responsive.css');
+@import url('./css/accessibility.css');

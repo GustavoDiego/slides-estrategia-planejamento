@@ -1,0 +1,98 @@
+@media (max-width: 768px) {
+    .slide {
+        padding: 30px;
+    }
+
+    .cover-slide .slide-title {
+        font-size: 48px;
+    }
+
+    .cover-slide .slide-subtitle {
+        font-size: 24px;
+    }
+
+    .slide-title {
+        font-size: 32px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .swot-matrix {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-right-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .slide-counter {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .presentation-container.fullscreen .slide {
+        padding: 40px;
+    }
+
+    .presentation-container.fullscreen .cover-slide .slide-title {
+        font-size: 56px;
+    }
+
+    .presentation-container.fullscreen .cover-slide .slide-subtitle {
+        font-size: 28px;
+    }
+
+    .presentation-container.fullscreen .slide-title {
+        font-size: 36px;
+    }
+
+    .cover-authors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cover-logo {
+        width: 80px;
+        height: 80px;
+        font-size: 42px;
+        margin-bottom: 24px;
+    }
+
+    .cover-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .cover-footer {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+}
+
+.presentation-container.fullscreen .cover-logo {
+    width: 160px;
+    height: 160px;
+    font-size: 80px;
+}

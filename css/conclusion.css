@@ -1,0 +1,79 @@
+.conclusion-statement {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--color-white);
+    padding: 24px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.highlights-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.highlights-list li {
+    font-size: 20px;
+    color: var(--color-text-primary);
+    margin: 16px 0;
+    padding-left: 8px;
+}
+
+.next-steps {
+    background: #f8f9fa;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.next-steps-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.next-steps ol {
+    padding-left: 24px;
+}
+
+.next-steps ol li {
+    font-size: 18px;
+    color: var(--color-text-primary);
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.market-trends {
+    margin-top: 24px;
+}
+
+.trends-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.substitutes-list {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.substitutes-list li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: var(--color-text-primary);
+}
+
+.differentials-section {
+    margin-top: 24px;
+}
+
+.differentials-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+}

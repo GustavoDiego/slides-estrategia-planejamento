@@ -1,0 +1,318 @@
+.cover-slide {
+    background: linear-gradient(135deg, #5856d6 0%, #4a148c 100%);
+    color: var(--color-white);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Reduce internal padding on short viewports to ensure fit */
+    padding: clamp(24px, 5vh, 60px);
+}
+
+.cover-slide::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: particleMove 20s linear infinite;
+    opacity: 0.3;
+}
+
+.cover-slide::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+    animation: floatOrb 15s ease-in-out infinite;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+    max-width: 920px;
+    padding: clamp(16px, 3vh, 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(12px, 2.5vh, 24px);
+}
+
+.cover-slide .slide-title {
+    font-size: clamp(44px, 8vw, 84px);
+    font-weight: 800;
+    margin-bottom: clamp(8px, 1.5vh, 24px);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+    line-height: 1.1;
+    animation: fadeInUp 1s ease-out 0.2s both;
+    color: #ffffff;
+}
+
+.cover-slide .slide-subtitle {
+    font-size: clamp(18px, 3vw, 28px);
+    font-weight: 400;
+    margin-bottom: clamp(16px, 3vh, 36px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s both;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+    color: #f0f0f0;
+}
+
+.cover-divider {
+    width: clamp(56px, 8vw, 80px);
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+    margin: clamp(12px, 2vh, 24px) auto;
+    border-radius: 2px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.8s both;
+}
+
+.cover-footer {
+    font-size: clamp(12px, 1.8vw, 16px);
+    font-weight: 600;
+    opacity: 0;
+    margin-top: clamp(16px, 3vh, 28px);
+    text-transform: uppercase;
+    letter-spacing: clamp(1px, 0.6vw, 3px);
+    animation: fadeInUp 1s ease-out 1s both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cover-footer::before,
+.cover-footer::after {
+    content: '';
+    width: clamp(28px, 6vw, 60px);
+    height: 1px;
+    background: rgba(255,255,255,0.5);
+}
+
+.cover-logo {
+    width: clamp(72px, 10vw, 120px);
+    height: clamp(72px, 10vw, 120px);
+    margin: 0 auto clamp(16px, 2.5vh, 28px);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(36px, 6vw, 64px);
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    animation: fadeInScale 1s ease-out 0s both;
+}
+
+.cover-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: clamp(12px, 2.2vh, 20px);
+    margin-top: clamp(16px, 3vh, 28px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.cover-stat-item {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 14px;
+    padding: clamp(12px, 2.2vh, 18px) clamp(12px, 2vw, 16px);
+    transition: all 0.3s ease;
+}
+
+.cover-stat-item:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.cover-stat-value {
+    font-size: clamp(24px, 4.6vw, 40px);
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.cover-stat-label {
+    font-size: clamp(10px, 1.4vw, 12px);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #f0f0f0;
+    font-weight: 600;
+}
+
+.cover-authors {
+    margin-top: clamp(16px, 3vh, 28px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1.4s both;
+}
+
+.cover-authors-title {
+    font-size: clamp(12px, 1.6vw, 14px);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: #e0e0e0;
+    margin-bottom: clamp(8px, 1.5vh, 14px);
+    font-weight: 700;
+}
+
+.cover-authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: clamp(10px, 2vw, 14px);
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.cover-author-item {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.25);
+    border-radius: 12px;
+    padding: clamp(10px, 1.8vh, 14px) clamp(12px, 2vw, 16px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cover-author-item:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateX(4px);
+    border-color: rgba(255,255,255,0.4);
+}
+
+.cover-author-icon {
+    font-size: clamp(18px, 2.6vw, 22px);
+    flex-shrink: 0;
+}
+
+.cover-author-name {
+    font-size: clamp(12px, 1.8vw, 14px);
+    font-weight: 600;
+    color: #ffffff;
+    text-align: left;
+}
+
+.cover-slide:focus-within .cover-content {
+    outline: 3px solid rgba(255,255,255,0.5);
+    outline-offset: 8px;
+    border-radius: 8px;
+}
+
+/* Height-aware compact modes to guarantee fit inside 16:9 slide */
+@media (max-height: 820px) {
+    .cover-slide .slide-title {
+        font-size: clamp(40px, 6.4vw, 72px);
+    }
+    .cover-slide .slide-subtitle {
+        font-size: clamp(16px, 2.6vw, 24px);
+        margin-bottom: clamp(12px, 2vh, 20px);
+    }
+    .cover-stats {
+        gap: clamp(10px, 1.8vh, 14px);
+    }
+}
+
+/* Fullscreen-specific compact layout to keep authors visible */
+.presentation-container.fullscreen .slide.cover-slide {
+    padding: clamp(24px, 6vh, 56px);
+}
+
+.presentation-container.fullscreen .cover-content {
+    gap: clamp(8px, 2vh, 16px);
+}
+
+.presentation-container.fullscreen .cover-stats {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 1.6vw, 16px);
+    margin-top: clamp(8px, 2vh, 14px);
+}
+
+.presentation-container.fullscreen .cover-stat-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 1.4vw, 12px);
+    padding: clamp(8px, 1.4vh, 12px) clamp(10px, 1.8vw, 14px);
+    border-radius: 10px;
+}
+
+.presentation-container.fullscreen .cover-stat-value {
+    margin: 0;
+    font-size: clamp(18px, 2.6vw, 28px);
+}
+
+.presentation-container.fullscreen .cover-stat-label {
+    font-size: clamp(10px, 1.2vw, 12px);
+    letter-spacing: 1px;
+}
+
+.presentation-container.fullscreen .cover-authors {
+    margin-top: clamp(10px, 2vh, 16px);
+}
+
+.presentation-container.fullscreen .cover-authors-grid {
+    gap: clamp(8px, 1.4vw, 12px);
+}
+
+.presentation-container.fullscreen .cover-author-item {
+    padding: clamp(8px, 1.4vh, 12px) clamp(10px, 1.8vw, 14px);
+}
+
+.presentation-container.fullscreen .cover-author-name {
+    font-size: clamp(12px, 1.6vw, 14px);
+}
+
+@media (max-height: 700px) {
+    .cover-slide {
+        padding: clamp(16px, 3.5vh, 28px);
+    }
+    .cover-content {
+        gap: clamp(8px, 1.8vh, 16px);
+    }
+    .cover-logo {
+        width: clamp(56px, 8vw, 88px);
+        height: clamp(56px, 8vw, 88px);
+        font-size: clamp(28px, 5vw, 48px);
+        margin-bottom: clamp(8px, 1.2vh, 16px);
+    }
+    .cover-divider {
+        margin: clamp(8px, 1.2vh, 12px) auto;
+    }
+    .cover-stats {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: clamp(8px, 1.4vh, 12px);
+    }
+    .cover-stat-item {
+        padding: clamp(8px, 1.4vh, 12px) clamp(8px, 1.4vw, 12px);
+    }
+    .cover-authors {
+        margin-top: clamp(12px, 2vh, 16px);
+    }
+    .cover-authors-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: clamp(8px, 1.4vh, 12px);
+    }
+    .cover-footer {
+        margin-top: clamp(10px, 1.6vh, 14px);
+        letter-spacing: clamp(0.5px, 0.4vw, 1.5px);
+    }
+}
